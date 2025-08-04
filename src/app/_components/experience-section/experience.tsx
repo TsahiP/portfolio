@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Building2, ExternalLink } from "lucide-react";
+import { Calendar, Building2, ExternalLink } from "lucide-react";
 import type { Experience } from "@/lib/types/user.types";
 import TrueFocus from "@/components/ui/text-focuse";
 

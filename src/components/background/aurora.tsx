@@ -1,7 +1,6 @@
 "use client";
 import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
 import { useEffect, useRef } from "react";
-import { ModeToggle } from "../mode-toggle";
 
 const VERT = `#version 300 es
 in vec2 position;

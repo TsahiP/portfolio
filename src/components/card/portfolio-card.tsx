@@ -1,8 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useCallback, useMemo } from "react";
 import "./ProfileCard.css";
 import ProfileCardComponent, { ProfileCardProps } from "./profile-card-component";
-import Link from "next/link";
 
 type ClientProfileCardProps = Omit<ProfileCardProps, 'onContactClick'>;
 
