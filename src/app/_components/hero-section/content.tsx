@@ -1,12 +1,7 @@
 "use client";
-import ProfileCard from "@/components/card/portfolio-card";
 import BlurText from "@/components/ui/blur-text";
-import { UserConfig } from "@/lib/types/user.types";
-import Link from "next/link";
 import React from "react";
-import { FaInstagram, FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { HeroContentProps } from "./hero";
-import TrueFocus from "@/components/ui/text-focuse";
 import SocialLinks from "@/components/social-links";
 
 const HeroContent = ({ user }: HeroContentProps) => {
