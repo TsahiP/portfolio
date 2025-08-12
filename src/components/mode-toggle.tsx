@@ -14,7 +14,9 @@ import {
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
-
+  React.useLayoutEffect(()=>{
+    setTheme("dark");
+  },[])
   return (
     <div style={{ position: "absolute", top: 5, right: 5, zIndex: 1 }}>
       <DropdownMenu>
