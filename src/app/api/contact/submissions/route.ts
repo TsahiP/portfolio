@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getContactSubmissions } from "@/lib/airtable";
 
-export async function GET(request: NextRequest) {
+export async function GET(_request: NextRequest) {
   try {
 
 

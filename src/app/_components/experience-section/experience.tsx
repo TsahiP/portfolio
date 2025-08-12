@@ -79,7 +79,7 @@ const Experience = ({ experience ,portfolioLink}: { experience: Experience[] ,po
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/20 via-primary to-primary/20 hidden md:block" />
 
           <div className="space-y-12">
-            {experience.map((exp: Experience, _index: number) => (
+            {experience.map((exp: Experience) => (
               <motion.div
                 key={`${exp.company}-${exp.startDate}`}
                 variants={itemVariants}

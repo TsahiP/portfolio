@@ -1,8 +1,5 @@
 import SectionWrapper from "@/components/section/section-wrapper";
-import ProfileCard from "../components/card/portfolio-card";
-import Aurora from "@/components/background/aurora";
 import Hero from "./_components/hero-section/hero";
-import { ModeToggle } from "@/components/mode-toggle";
 import { ThemeProvider } from "@/lib/providers/theme-provider";
 import { userActions } from "@/actions/user-action";
 import NavBar from "./_components/nav-bar/nav-bar";

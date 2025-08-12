@@ -118,7 +118,7 @@ const users: UserConfig[] = [
       {
         company: "DeePlan",
         position: "Full-Stack Developer",
-        startDate: "2021-01-01",
+        startDate: "2021-2025",
         endDate: "Present",
         description: [
           "Developed enterprise-level management systems, enabling companies to streamline internal processes",
