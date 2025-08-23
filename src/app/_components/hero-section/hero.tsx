@@ -1,18 +1,52 @@
 "use client";
+import BlurText from "@/components/ui/blur-text";
+import React from "react";
+import SocialLinks from "@/components/social-links";
 import ProfileCard from "@/components/card/portfolio-card";
 import { UserConfig } from "@/lib/types/user.types";
-import React from "react";
-import HeroContent from "./content";
 
 export interface HeroContentProps {
   user?: UserConfig;
 }
 
-const Hero = ({ user }: HeroContentProps) => {
+const HeroContent = ({ user }: HeroContentProps) => {
+  const handleAnimationComplete = () => {
+    console.log("Animation completed!");
+  };
   return (
     <div className=" w-full h-full flex flex-row items-center justify-center gap-10">
-      <HeroContent user={user} />
-      <div>
+
+    <div className=" flex flex-col md:flex-row gap-10 justify-center items-center mt-12 md:mt-0 ">
+      <div className="md:w-1/2">
+        <BlurText
+          onAnimationComplete={handleAnimationComplete}
+          text={`Hello, I'm`}
+          className="text-1xl justify-center md:justify-start font-bold"
+        />
+        <BlurText
+          onAnimationComplete={handleAnimationComplete}
+          text={user?.name}
+          className="text-5xl justify-center md:justify-start font-bold  "
+        />
+
+        <BlurText
+          onAnimationComplete={handleAnimationComplete}
+          text={`Full Stack Developer`}
+          className="text-3xl justify-center md:justify-start font-bold text-[#7658ed]"
+        />
+        <div className="mt-4 max-w-lg">
+          <BlurText
+            onAnimationComplete={handleAnimationComplete}
+            text={user?.bio}
+            className="text-1xl justify-center md:justify-start font-bold leading-relaxed"
+            animateBy="words"
+          />
+        </div>
+        <div className="flex flex-row gap-4 mt-4 justify-center md:justify-start">
+          <SocialLinks socialLinks={user?.socialLinks} />
+        </div>
+      </div>
+      <div className="md:w-1/3">
         <ProfileCard
           name="Tsahi Pahima"
           title=""
@@ -21,8 +55,8 @@ const Hero = ({ user }: HeroContentProps) => {
           contactText="Contact Me"
           avatarUrl="/avatar.png"
           miniAvatarUrl="/avatar.jpg"
-          behindGradient="radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),hsla(266,100%,90%,var(--card-opacity)) 4%,hsla(266,50%,80%,calc(var(--card-opacity)*0.75)) 10%,hsla(266,25%,70%,calc(var(--card-opacity)*0.5)) 50%,hsla(266,0%,60%,0) 100%)"
-          innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
+          behindGradient=""
+          innerGradient=""
           showUserInfo={true}
           enableTilt={true}
           iconUrl=""
@@ -32,7 +66,8 @@ const Hero = ({ user }: HeroContentProps) => {
         />
       </div>
     </div>
+    </div>
   );
 };
 
-export default Hero;
+export default HeroContent;
