@@ -129,6 +129,14 @@ const Experience = ({ experience ,portfolioLink}: { experience: Experience[] ,po
                         )}
                       </div>
                     )}
+                    {exp.tools && (
+                      <div className="flex gap-3 pt-4 ">
+                        <h3 className="">Tools:</h3> 
+                        <p className="text-muted-foreground leading-relaxed">
+                          {exp.tools.join(", ")}
+                        </p>
+                      </div>
+                    )}
 
                     {/* Hover Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
