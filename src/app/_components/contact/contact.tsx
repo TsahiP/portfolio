@@ -32,9 +32,9 @@ export function Contact({ className, user }: ContactProps) {
         {/* Contact Content */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+          <div className="space-y-8  flex flex-col  justify-center items-center md:items-start md:justify-start ">
+            <div className="flex flex-col gap-2 text-center md:text-left">
+              <h3 className="text-xl  font-semibold text-gray-900 dark:text-white mb-4">
                 Let&apos;s Connect
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
