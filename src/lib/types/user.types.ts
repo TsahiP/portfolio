@@ -21,6 +21,7 @@ export type ContactInfo = {
     startDate: string;
     endDate: string;
     description?: string[];
+    tools?: string[];
   };
   
   export type Project = {
