@@ -9,7 +9,7 @@ const SectionWarapper = (SectionWarapperProps: SectionWarapperProps) => {
   return (
     <div
       className={cn(
-        "min-h-dvh flex items-center justify-center  py-16",SectionWarapperProps.className)} id={SectionWarapperProps.id}>
+        "min-h-[90dvh] flex items-center justify-center  ",SectionWarapperProps.className)} id={SectionWarapperProps.id}>
       {SectionWarapperProps.children}
     </div>
   );
