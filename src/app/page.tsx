@@ -5,6 +5,7 @@ import { userActions } from "@/actions/user-action";
 import NavBar from "./_components/nav-bar/nav-bar";
 import Experience from "./_components/experience-section/experience";
 import { Contact } from "./_components/contact/contact";
+import Skills from "./_components/skills-section/skills";
 export default async function Home() {
   const user = await userActions.getInfo();
   if (!user) {
@@ -25,6 +26,9 @@ export default async function Home() {
         </SectionWrapper>
         <SectionWrapper>
           <Experience experience={user.experience} portfolioLink={user.portfolioLink} />
+        </SectionWrapper>
+        <SectionWrapper>
+          <Skills skills={user.skills} />
         </SectionWrapper>
         <Contact user={user} />
       </ThemeProvider>

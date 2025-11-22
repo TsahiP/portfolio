@@ -85,20 +85,6 @@ const users: UserConfig[] = [
     ],
     // TODO: Edit projects
     projects: [
-      {
-        name: "Sharona Nails",
-        description: "Sharona Nails is an AI-powered CRM for a nail salon.",
-        image: "/images/project-1.png",
-        url: "https://sharona-nails.vercel.app/",
-        technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-      },
-      {
-        name: "AIT-well",
-        description: "AIT-well is a platform for AI-powered wellness.",
-        image: "/images/project-2.png",
-        url: "https://project1.com",
-        technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-      },
     ],
     experience: [
       {
@@ -113,7 +99,6 @@ const users: UserConfig[] = [
           "Deployed applications in Dockerized environments and integrated AWS S3 for file storage.",
           "Ensured code quality through API testing (Postman) and version control with Git.",
         ],
-        tools: ["React","React Native", "Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Docker", "Kubernetes", "Prisma ORM", "Git", "Zustand", "Expo", "AWS S3", "Postman", "ViTest"],
       },
       {
         company: "DeePlan",
@@ -127,7 +112,6 @@ const users: UserConfig[] = [
           "Built workflow automations and business applications using Power Automate, Power Apps, and Microsoft Forms.",
           "Collaborated closely with customers to gather requirements and deliver tailored, impactful solutions.",
         ],
-        tools: ["React", "Node.js", "Redux", "SCSS", "Material-UI", "Reactstrap", "Azure Functions", "Power Automate", "Microsoft Forms", "Power Apps", "Git", "Postman", "SQL", "PowerShell", "VBA", "SharePoint"],
       },
     ],
     navigationLinks: [
