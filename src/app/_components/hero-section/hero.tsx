@@ -31,7 +31,7 @@ const HeroContent = ({ user }: HeroContentProps) => {
 
         <BlurText
           onAnimationComplete={handleAnimationComplete}
-          text={`AI Engineer`}
+          text={`Software Engineer`}
           className="text-3xl justify-center md:justify-start font-bold text-[#7658ed]"
         />
         <div className="mt-4 max-w-lg">
