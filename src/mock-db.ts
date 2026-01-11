@@ -89,7 +89,7 @@ const users: UserConfig[] = [
     experience: [
       {
         company: "IDF Digital",
-        position: "Full Stack Developer",
+        position: "Software Engineer",
         startDate: "2024-09-01",
         endDate: "Present",
         description: [
@@ -102,9 +102,9 @@ const users: UserConfig[] = [
       },
       {
         company: "DeePlan",
-        position: "Full-Stack Developer",
-        startDate: "2022",
-        endDate: "2024-08-01",
+        position: "Software Engineer",
+        startDate: "2022-01-01",
+        endDate: "2025-01-01",
         description: [
           "Developed and maintained dynamic web applications, delivering responsive and engaging user experiences.",
           "Automated manual customer processes to improve workflow efficiency and reduce operational overhead.",
