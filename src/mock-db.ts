@@ -85,6 +85,13 @@ const users: UserConfig[] = [
     ],
     // TODO: Edit projects
     projects: [
+      {
+        name: "PergolaMx",
+        description: "Website for Pergola workers",
+        image: "",
+        technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Node.js", "PostgreSQL", "PrismaORM", "SQL", "Git", "supabase","shadcn/ui"],
+        url: "https://pergola-mx-tpdev.vercel.app",
+      },
     ],
     experience: [
       {
@@ -114,7 +121,7 @@ const users: UserConfig[] = [
         ],
       },
     ],
-    navigationLinks: [
+    navigationLinks: [ 
       {
         name: "About",
         url: "about",

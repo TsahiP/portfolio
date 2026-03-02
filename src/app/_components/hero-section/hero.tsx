@@ -10,33 +10,27 @@ export interface HeroContentProps {
 }
 
 const HeroContent = ({ user }: HeroContentProps) => {
-  const handleAnimationComplete = () => {
-    console.log("Animation completed!");
-  };
+
   return (
     <div className=" w-full h-full flex flex-row items-center justify-center gap-10">
 
     <div className=" flex flex-col md:flex-row gap-10 justify-center items-center mt-12 md:mt-0 ">
       <div className="md:w-1/2">
         <BlurText
-          onAnimationComplete={handleAnimationComplete}
           text={`Hello, I'm`}
           className="text-1xl justify-center md:justify-start font-bold"
         />
         <BlurText
-          onAnimationComplete={handleAnimationComplete}
           text={user?.name}
           className="text-5xl justify-center md:justify-start font-bold  "
         />
 
         <BlurText
-          onAnimationComplete={handleAnimationComplete}
           text={`Software Engineer`}
           className="text-3xl justify-center md:justify-start font-bold text-[#7658ed]"
         />
         <div className="mt-4 max-w-lg">
           <BlurText
-            onAnimationComplete={handleAnimationComplete}
             text={user?.bio}
             className="text-1xl justify-center md:justify-start font-bold leading-relaxed"
             animateBy="words"
