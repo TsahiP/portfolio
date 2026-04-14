@@ -247,9 +247,9 @@ const ProfileCardComponent = ({
     ({
       "--icon": iconUrl ? `url(${iconUrl})` : "none",
       "--grain": grainUrl ? `url(${grainUrl})` : "none",
-      "--behind-gradient": showBehindGradient
-        ? (behindGradient ?? DEFAULT_BEHIND_GRADIENT)
-        : "none",
+      "--behind-gradient": showBehindGradient ?? "none",
+        // ? (behindGradient ?? DEFAULT_BEHIND_GRADIENT)
+        // : "none",
       "--inner-gradient": innerGradient ?? DEFAULT_INNER_GRADIENT,
     } as React.CSSProperties),
     [iconUrl, grainUrl, showBehindGradient, behindGradient, innerGradient]
