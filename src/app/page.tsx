@@ -5,6 +5,8 @@ import { userActions } from "@/actions/user-action";
 import NavBar from "./_components/nav-bar/nav-bar";
 import Experience from "./_components/experience-section/experience";
 import { Contact } from "./_components/contact/contact";
+import Education from "./_components/education-section/education";
+import Electronics from "./_components/electronics-section/electronics";
 import Skills from "./_components/skills-section/skills";
 export default async function Home() {
   const user = await userActions.getInfo();
@@ -26,6 +28,12 @@ export default async function Home() {
         </SectionWrapper>
         <SectionWrapper>
           <Experience experience={user.experience} portfolioLink={user.portfolioLink} />
+        </SectionWrapper>
+        <SectionWrapper className="min-h-0">
+          <Education education={user.education} />
+        </SectionWrapper>
+        <SectionWrapper>
+          <Electronics electronics={user.electronics} />
         </SectionWrapper>
         <SectionWrapper>
           <Skills skills={user.skills} />

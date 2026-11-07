@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Calendar, Building2, ExternalLink } from "lucide-react";
+import { Calendar, Building2, ExternalLink, MapPin } from "lucide-react";
 import type { Experience } from "@/lib/types/user.types";
 import TrueFocus from "@/components/ui/text-focuse";
 
@@ -102,6 +102,12 @@ const Experience = ({ experience ,portfolioLink}: { experience: Experience[] ,po
                         <div className="flex items-center gap-2 text-muted-foreground">
                           <span className="font-medium">{exp.position}</span>
                         </div>
+                        {exp.location && (
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground mt-1">
+                            <MapPin className="w-4 h-4" />
+                            <span>{exp.location}</span>
+                          </div>
+                        )}
                       </div>
 
                       {/* Date Range */}

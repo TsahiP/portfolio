@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code2 } from "lucide-react";
+import { Code2, Plane } from "lucide-react";
 import type { Skill } from "@/lib/types/user.types";
 import TrueFocus from "@/components/ui/text-focuse";
 import {
@@ -17,6 +17,9 @@ import {
   SiMongodb,
   SiGit,
   SiGooglecloud,
+  SiSharp,
+  SiOpenjdk,
+  SiArduino,
 } from "react-icons/si";
 
 // Map skill icon names to React Icons components
@@ -33,6 +36,10 @@ const skillIconMap: Record<string, React.ComponentType<{ className?: string }>> 
   mongodb: SiMongodb,
   git: SiGit,
   gcp: SiGooglecloud,
+  csharp: SiSharp,
+  java: SiOpenjdk,
+  arduino: SiArduino,
+  betaflight: Plane,
 };
 
 const Skills = ({ skills }: { skills: Skill[] }) => {

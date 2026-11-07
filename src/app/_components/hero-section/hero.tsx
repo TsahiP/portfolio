@@ -13,6 +13,13 @@ const HeroContent = ({ user }: HeroContentProps) => {
   const handleAnimationComplete = () => {
     console.log("Animation completed!");
   };
+
+  const currentRole = user?.experience?.find((exp) => exp.endDate === "Present");
+  const headline =
+    currentRole != null
+      ? `${currentRole.position} @ ${currentRole.company}`
+      : "Software Engineer";
+
   return (
     <div className=" w-full h-full flex flex-row items-center justify-center gap-10">
 
@@ -31,7 +38,7 @@ const HeroContent = ({ user }: HeroContentProps) => {
 
         <BlurText
           onAnimationComplete={handleAnimationComplete}
-          text={`Software Engineer`}
+          text={headline}
           className="text-3xl justify-center md:justify-start font-bold text-[#7658ed]"
         />
         <div className="mt-4 max-w-lg">
@@ -42,6 +49,14 @@ const HeroContent = ({ user }: HeroContentProps) => {
             animateBy="words"
           />
         </div>
+        {user?.electronics?.lookingFor && (
+          <div className="mt-4 flex justify-center md:justify-start">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/40 bg-primary/10 text-primary text-sm font-medium">
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              {user.electronics.lookingFor}
+            </span>
+          </div>
+        )}
         <div className="flex flex-row gap-4 mt-4 justify-center md:justify-start">
           <SocialLinks socialLinks={user?.socialLinks} />
         </div>
@@ -49,7 +64,7 @@ const HeroContent = ({ user }: HeroContentProps) => {
       <div className="md:w-1/3">
         <ProfileCard
           name="Tsahi Pahima"
-          title=""
+          title={headline}
           handle="tsahipahima"
           status="Online"
           contactText="Contact Me"

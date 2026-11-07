@@ -20,6 +20,7 @@ export type ContactInfo = {
     position: string;
     startDate: string;
     endDate: string;
+    location?: string;
     description?: string[];
     tools?: string[];
   };
@@ -32,13 +33,28 @@ export type ContactInfo = {
     technologies: string[];
   };
   
-  // export type Education = {
-  //   school: string;
-  //   degree: string;
-  //   startDate: string;
-  //   endDate: string;
-  // };
+  export type Education = {
+    school: string;
+    degree: string;
+    startDate: string;
+    endDate: string;
+  };
   
+  export type ElectronicsHighlight = {
+    title: string;
+    description: string;
+    tags: string[];
+    image?: string;
+  };
+
+  export type ElectronicsProfile = {
+    title: string;
+    summary: string;
+    lookingFor: string;
+    highlights: ElectronicsHighlight[];
+    skills: string[];
+  };
+
   export type NavigationLink = {
     name: string;
     url: string;
@@ -59,6 +75,8 @@ export type ContactInfo = {
     bio: string;
     skills: Skill[];
     experience: Experience[];
+    education: Education[];
+    electronics: ElectronicsProfile;
     projects: Project[];
     navigationLinks: NavigationLink[];
   };
